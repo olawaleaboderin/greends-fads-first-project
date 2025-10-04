@@ -1,0 +1,11 @@
+5.1. Can you explain the copy (cp ../temp-* .) command used above?
+In the command, three things were combined: first, ../ which means the parent directory of my current working directory; the * is a wildcard that matches zero or more characters, so temp-* means all files whose names start with temp-; and . means the current directory where I am presently. Having explained the meaning of each, the command cp ../temp-* . stands for “copy all files in the parent directory (../) whose names start with temp- into the current directory (.).”
+
+5.2. Can you explain why, in this case, we did not have to do git init?
+We didn’t have to do git init because the current directory was a result of the clone and was already a Git repository. It already contained a hidden .git/ folder.
+
+5.3. Can you commit the files copied? What do you need to do? Execute the commands that are needed.
+To commit the files I copied, I will do the following:
+git add .      (to stage the new files)  
+git commit -m "Add copied files"   (to commit the staged files)  
+
